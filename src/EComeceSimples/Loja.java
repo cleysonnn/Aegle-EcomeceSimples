@@ -1,4 +1,4 @@
-package EComeceSimples;
+package br.com.cleyson.EComeceSimples;
 
 public class Loja {
 	private ContaCorrente conta;
@@ -18,7 +18,7 @@ public class Loja {
 
 	public String vender(double valor) throws ValorInvalidoExecption {
 		if (valor <= 0) {
-			throw new ValorInvalidoExecption("valor a ser creditado é invalido");
+			throw new ValorInvalidoExecption("Valor digitado não é valido");
 		}
 		conta.creditar(valor);
 		return "venda efetuada com sucesso";
@@ -27,10 +27,11 @@ public class Loja {
 
 	public String comprar(double valor) throws CreditoInsuficienteException {
 		if (conta.getSaldo() < valor) {
-			throw new CreditoInsuficienteException("Nao possui credito a ser debitado");
+			throw new CreditoInsuficienteException("Credito insuficiente");
 		}
 		conta.debitar(valor);
 		return "compra efetuada com sucesso";
 	}
 
 }
+
