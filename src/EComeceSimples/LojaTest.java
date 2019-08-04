@@ -16,10 +16,10 @@ public class LojaTest {
 
 	}
 
-	@Test // Quando o valor recebido Ã© 0 ou menor
+	@Test // Quando o valor recebido não 0 ou menor
 	void testvendaErro() {
 		Exception vendaEx = assertThrows(ValorInvalidoExecption.class, () -> loja.vender(0));
-		assertEquals("valor a ser creditado Ã© invalido", vendaEx.getMessage());
+		assertEquals("valor a ser creditado é invalido", vendaEx.getMessage());
 		 System.out.println(loja.mostarSaldo());
 
 	}
