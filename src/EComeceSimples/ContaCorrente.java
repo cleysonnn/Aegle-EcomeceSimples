@@ -1,4 +1,4 @@
-package br.com.cleyson.EComeceSimples;
+package EComeceSimples;
 
 public class ContaCorrente {
 	private double saldo;

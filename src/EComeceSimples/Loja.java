@@ -1,4 +1,4 @@
-package br.com.cleyson.EComeceSimples;
+package EComeceSimples;
 
 public class Loja {
 	private ContaCorrente conta;

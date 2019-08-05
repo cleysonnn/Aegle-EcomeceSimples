@@ -1,4 +1,4 @@
-package br.com.cleyson.EComeceSimples;
+package EComeceSimples;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -28,7 +28,9 @@ public class LojaTest {
 	void testComValorInvalidoNaVenda() {
 		Exception vendaEx = assertThrows(ValorInvalidoExecption.class, () -> loja.vender(0));
 		assertEquals("Valor digitado não é valido", vendaEx.getMessage());
-		 System.out.println(loja.mostarSaldo());
+		
+		assertEquals(150.00, loja.mostarSaldo());
+		//System.out.println(loja.mostarSaldo());
 
 	}
 
@@ -41,7 +43,9 @@ public class LojaTest {
 	@Test
 	void testDeveAdicionarOValorDaVendaNaContaCorrente() throws ValorInvalidoExecption {
 		assertEquals("venda efetuada com sucesso", loja.vender(10));
-		System.out.println("saldo apos a venda : " + loja.mostarSaldo());
+		
+		assertEquals(160.00, loja.mostarSaldo());
+		//System.out.println("saldo apos a venda : " + loja.mostarSaldo());
 
 	}
 
@@ -55,7 +59,9 @@ public class LojaTest {
 	void TestCompraComValoresMaioresQueContaCorrente() {
 		Exception compraEX = assertThrows(CreditoInsuficienteException.class, () -> loja.comprar(200));
 		assertEquals("Credito insuficiente", compraEX.getMessage());
-		System.out.println(loja.mostarSaldo());
+		
+		assertEquals(150.00, loja.mostarSaldo());
+		//System.out.println(loja.mostarSaldo());
 	}
 	/*
 	 *Recebe  um double referente a um valor da compra
@@ -66,7 +72,9 @@ public class LojaTest {
 	@Test
 	void testDeveSubtrarirOValorDaCompraDaContaCorrente() throws CreditoInsuficienteException {
 		assertEquals("compra efetuada com sucesso", loja.comprar(20));
-		System.out.println("saldo apos a compra : " + loja.mostarSaldo());
+		
+		assertEquals(130.00, loja.mostarSaldo());
+		//System.out.println("saldo apos a compra : " + loja.mostarSaldo());
 	}
 
 }
