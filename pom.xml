@@ -5,7 +5,7 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>EcomeceAeagle</name>
 
-    <dependencies> 
+    <dependencies>
     
     <dependency>
     <groupId>org.apache.maven.plugins</groupId>
@@ -14,7 +14,7 @@
 </dependency>
     <dependency>
     <groupId>org.junit.jupiter</groupId>
-    <artifactId>junit-jupiter-api</artifactId>
+    <artifactId>junit-jupiter-engine</artifactId>
     <version>5.4.0</version>
     <scope>test</scope>
 </dependency>
@@ -50,6 +50,7 @@
           <target>1.8</target>
         </configuration>
       </plugin>
+      
     </plugins>
   </build>
 </project>

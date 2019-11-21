@@ -1,9 +1,13 @@
-package EComeceSimples;
+package EComeceSimplesTest;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import EComeceSimples.CreditoInsuficienteException;
+import EComeceSimples.Loja;
+import EComeceSimples.ValorInvalidoExecption;
 
 public class LojaTest {
 
